@@ -22,19 +22,24 @@ This project documents the setup of a Kali Linux virtual machine in Virtualbox f
 # Lab Setup Procedure
 ## Step 1 - Preparing VirtualBox and Kali Linux
 Installed VirtualBox and extracted the Kali Linux 7-zip archive. The extracted folder contain a .vbox configuration file and a .vsdi virtual disk, where were used to register and start the VM.
+![](PR2.png)
+![](PR3.png)
 ## Step 2 - Creating the NAT Network
 Opened VirtualBox's Network Manager and configured:
 Network name: NatNetwork
 IPv4 prefix: 10.0.0.0/24
 DHCP server: Enabled
+![](PR1.png)
 ## Step 3 - Selecting the correct Network Adapter
 Under the Kali VM's network settings, set Adapter 1 to NAT Network and selected the Network that was previously created, "NatNetwork".
+![](PR4.png)
 ## Step 4 - Configure Kali Linux's IPv4 Settings
 In Kali's wired connection settings, changed the IPv4 method to Manual and entered the following:
 IPv4 address: 10.0.0.2
 Prefix length: 24
 Gateway: 10.0.0.1
 DNS server: 8.8.8.8
+![](PR5.png)
 ## Step 5 - Verify Network Connectivity
 I ran two checks in Kali's terminal to test for connectivity:
 | Tests | The Output | Outcome |
@@ -42,9 +47,11 @@ I ran two checks in Kali's terminal to test for connectivity:
 | ping -c 5 10.0.0.1 | 0% Packet loss | Successful |
 | ping -c 5 8.8.8.8 | 0% Packet loss | Successful |
 
+![](PR6.png)
 These results confirm that the Kali VM could reach the default gateway and an external IP address during the tests.
 ## Step 6 - Create a Recovery Snapshot 
 Created a snapshot named Fresh Kali Save after configuring the VM. It provides a restore point for future projects. The snapshot manager displays the saved snapshot.
+![](PR7.png)
 # The Outcome
 The prebuilt Kali Linux VM was imported successfully, attached to the configured NAT Network, and given a manual IPv4 address. The gateway and external-IP ping tests both returned 0% packet loss, and a fallback snapshot was created.
 ## Challenges
