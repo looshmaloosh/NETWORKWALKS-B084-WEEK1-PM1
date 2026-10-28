@@ -30,11 +30,15 @@ Installed VirtualBox and extracted the Kali Linux 7-zip archive. The extracted f
 # The Outcome
 ## Challenges
 ## What I Learned
-## Responsible Use
+## Responsible & Ethical Use
+This project and the laboratory environment is strictly used for educational purposes. Any future testing should be limited to systems owned by me or systems where I have clear and explicit permission.
 ## Resources
+- VirtualBox: https://virtualbox.org/wiki/Downloads
+- Kali Linux: https://kali.org/get-kali
 ### Author Information
 Ali Fares
-Cybersecurity Intern | NetworkWalks B084
+Cybersecurity Intern | Networkwalks B084
 
 https://www.linkedin.com/in/ali-fares-86870733a/
 ### Project Information
+Program Name: Cybersecurity at Networkwalks | Week: 01 | Project: Cybersecurity Lab Setup
