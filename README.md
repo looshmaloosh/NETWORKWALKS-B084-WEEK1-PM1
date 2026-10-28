@@ -23,6 +23,7 @@ This project documents the setup of a Kali Linux virtual machine in Virtualbox f
 ## Step 1 - Preparing VirtualBox and Kali Linux
 Installed VirtualBox and extracted the Kali Linux 7-zip archive. The extracted folder contain a .vbox configuration file and a .vsdi virtual disk, where were used to register and start the VM.
 ## Step 2 - Creating the NAT Network
+
 ## Step 3 - Selecting the correct Network Adapter
 ## Step 4 - Configure Kali Linux's IPv4 Settings
 ## Step 5 - Verify Network Connectivity
@@ -30,6 +31,12 @@ Installed VirtualBox and extracted the Kali Linux 7-zip archive. The extracted f
 # The Outcome
 ## Challenges
 ## What I Learned
+1. Virtualisation: How a prebuilt VM's .vbox configuration and .vdi virtual disk are used in VirtualBox.
+2. NAT networking: How a NAT Network creates a shared virtual subnet and gateway for lab VMs.
+3. IPv4 addressing: How a manually configured address, subnet prefix, gateway and DNS setting fit together.
+4. Connectivity testing: How pinging provides initial evidence of successful connectivity, and why DNS must be tested separately.
+5. Recovery planning: How a VM snapshot preserves a baseline for later experiments.
+6. Documentation: How screenshots and observed outputs make a technical lab easier to review and reproduce.
 ## Responsible & Ethical Use
 This project and the laboratory environment is strictly used for educational purposes. Any future testing should be limited to systems owned by me or systems where I have clear and explicit permission.
 ## Resources
