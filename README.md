@@ -19,3 +19,4 @@ This project documents the setup of a Kali Linux virtual machine in Virtualbox f
 | Default Gateway   | 10.0.0.1 |
 | DNS Server   | 8.8.8.8 |
 | Allowable IP Range | 10.0.0.3-10.0.0.99 |
+# Lab Setup Procedure
