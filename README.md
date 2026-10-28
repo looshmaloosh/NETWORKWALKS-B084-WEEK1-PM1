@@ -27,8 +27,16 @@ Installed VirtualBox and extracted the Kali Linux 7-zip archive. The extracted f
 ## Step 3 - Selecting the correct Network Adapter
 ## Step 4 - Configure Kali Linux's IPv4 Settings
 ## Step 5 - Verify Network Connectivity
-## Step 6 - Create a Recovery Snapshot
+I ran two checks in Kali's terminal to test for connectivity:
+| Tests | The Output | Outcome |
+| --- | ------- | ------- |
+| ping -c 5 10.0.0.1 | 0% Packet loss | Successful |
+| ping -c 5 8.8.8.8 | 0% Packet loss | Successful |
+These results confirm that the Kali VM could reach the default gateway and an external IP address during the tests.
+## Step 6 - Create a Recovery Snapshot 
+Created a snapshot named Fresh Kali Save after configuring the VM. It provides a restore point for future projects. The snapshot manager displays the saved snapshot.
 # The Outcome
+The prebuilt Kali Linux VM was imported successfully, attached to the configured NAT Network, and given a manual IPv4 address. The gateway and external-IP ping tests both returned 0% packet loss, and a fallback snapshot was created.
 ## Challenges
 - Antivirus detection: Microsoft Defender flagged the downloaded Kali .7z archive. Since the distribution came from the official Kali Linux page, I inspected the Zip Archive's SHA-256 string using Windows Powershell and cross referenced with the official page to inspect the zip archive's  integrity. Since it the hashes matched, I whitelisted the zip manually and successfully extracted the archive. 
 - Static addressing and DHCP: The VirtualBox NAT Network has DHCP enabled, while Kali's IPv4 address was assigned manually. Since these settings are separate, I had to manually assign the IPv4 address, Default Gateway, and DNS server in Kali Linux.
