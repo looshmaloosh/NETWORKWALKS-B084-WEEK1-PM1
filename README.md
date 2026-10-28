@@ -17,11 +17,12 @@ This project documents the setup of a Kali Linux virtual machine in VirtualBox f
 | --------- | --------------|
 | Host OS   | Windows 11    |
 | Lab OS    | Kali Linux 2026.3 |
-| Virtual Network Name    | NAT Network |
+| Network Type  | NAT Network |
+| Network Name | NatNetwork |
 | Kali IP Address   | 10.0.0.2/24 |
 | Default Gateway   | 10.0.0.1 |
 | DNS Server   | 8.8.8.8 |
-| Allowable IP Range | 10.0.0.3-10.0.0.99 |
+| Future VM IPv4 Range | 10.0.0.3-10.0.0.99 |
 # Lab Setup Procedure
 ## Step 1 - Preparing VirtualBox and Kali Linux
 Installed VirtualBox and extracted the Kali Linux 7-zip archive. The extracted folder contained a .vbox configuration file and a .vdi virtual disk file, which were used to register and start the VM.
