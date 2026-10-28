@@ -23,15 +23,25 @@ This project documents the setup of a Kali Linux virtual machine in Virtualbox f
 ## Step 1 - Preparing VirtualBox and Kali Linux
 Installed VirtualBox and extracted the Kali Linux 7-zip archive. The extracted folder contain a .vbox configuration file and a .vsdi virtual disk, where were used to register and start the VM.
 ## Step 2 - Creating the NAT Network
-
+Opened VirtualBox's Network Manager and configured:
+Network name: NatNetwork
+IPv4 prefix: 10.0.0.0/24
+DHCP server: Enabled
 ## Step 3 - Selecting the correct Network Adapter
+Under the Kali VM's network settings, set Adapter 1 to NAT Network and selected the Network that was previously created, "NatNetwork".
 ## Step 4 - Configure Kali Linux's IPv4 Settings
+In Kali's wired connection settings, changed the IPv4 method to Manual and entered the following:
+IPv4 address: 10.0.0.2
+Prefix length: 24
+Gateway: 10.0.0.1
+DNS server: 8.8.8.8
 ## Step 5 - Verify Network Connectivity
 I ran two checks in Kali's terminal to test for connectivity:
 | Tests | The Output | Outcome |
 | --- | ------- | ------- |
 | ping -c 5 10.0.0.1 | 0% Packet loss | Successful |
 | ping -c 5 8.8.8.8 | 0% Packet loss | Successful |
+
 These results confirm that the Kali VM could reach the default gateway and an external IP address during the tests.
 ## Step 6 - Create a Recovery Snapshot 
 Created a snapshot named Fresh Kali Save after configuring the VM. It provides a restore point for future projects. The snapshot manager displays the saved snapshot.
