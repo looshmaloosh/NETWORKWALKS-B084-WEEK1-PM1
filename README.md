@@ -5,26 +5,26 @@ This project involves setting up an efficient cybersecurity lab environment usin
 </div>
 
 ## Project Overview
-This project documents the setup of a Kali Linux virtual machine in Virtualbox for future cybersecurity projects. I imported a prebuilt Kali VM, created a dedicated private NAT Network, manually configured Kali's IPv4 settings, verified connectivity, and saved a VM snapshot of the current VM.
+This project documents the setup of a Kali Linux virtual machine in VirtualBox for future cybersecurity projects. I imported a prebuilt Kali VM, created a dedicated private NAT Network, manually configured Kali's IPv4 settings, verified connectivity, and created a snapshot of the configured VM.
 ## Objectives
 - Set up VirtualBox and import a prebuilt Kali Linux VM.
-- Create a private NAT Network for the virtual kali lab.
+- Create a private NAT Network for the virtual Kali lab.
 - COnfigure Kali with a manual IPv4 address, default gateway, and DNS setting.
 - Confirm connectivity with the default gateway and an external IP address.
-- Save a snapshot to fallback to when recovery is needed.
+- Save a snapshot to fallback to when recovery is required.
 ## Lab Architecture
 | Component | Configuration |
 | --------- | --------------|
-| HOST OS   | Windows 11    |
-| LAB OS    | Kali Linux 2026.3 |
+| Host OS   | Windows 11    |
+| Lab OS    | Kali Linux 2026.3 |
 | Virtual Network Name    | NAT Network |
-| KALI IP Address   | 10.0.0.2/24 |
+| Kali IP Address   | 10.0.0.2/24 |
 | Default Gateway   | 10.0.0.1 |
 | DNS Server   | 8.8.8.8 |
 | Allowable IP Range | 10.0.0.3-10.0.0.99 |
 # Lab Setup Procedure
 ## Step 1 - Preparing VirtualBox and Kali Linux
-Installed VirtualBox and extracted the Kali Linux 7-zip archive. The extracted folder contain a .vbox configuration file and a .vsdi virtual disk, where were used to register and start the VM.
+Installed VirtualBox and extracted the Kali Linux 7-zip archive. The extracted folder contained a .vbox configuration file and a .vdi virtual disk file, which were used to register and start the VM.
 
 ![](Project%201/PR2.png)
 ![](Project%201/PR3.png)
@@ -38,7 +38,7 @@ DHCP server: Enabled
 ![NAT Network Creation](Project%201/PR1.png)
 
 ## Step 3 - Selecting the correct Network Adapter
-Under the Kali VM's network settings, set Adapter 1 to NAT Network and selected the Network that was previously created, "NatNetwork".
+Under the Kali VM's network settings, set Adapter 1 to NAT Network and selected the previously created network, "NatNetwork".
 
 ![Kali Network Adapter](Project%201/PR4.png)
 
@@ -79,7 +79,7 @@ The prebuilt Kali Linux VM was imported successfully, attached to the configured
 5. Recovery planning: How a VM snapshot preserves a baseline for later experiments.
 6. Documentation: How screenshots and observed outputs make a technical lab easier to review and reproduce.
 ## Responsible & Ethical Use
-This project and the laboratory environment is strictly used for educational purposes. Any future testing should be limited to systems owned by me or systems where I have clear and explicit permission.
+This project and the laboratory environment are strictly used for educational purposes. Any future testing should be limited to systems owned by me or systems where I have clear and explicit permission.
 ## Resources
 - VirtualBox: https://virtualbox.org/wiki/Downloads
 - Kali Linux: https://kali.org/get-kali
