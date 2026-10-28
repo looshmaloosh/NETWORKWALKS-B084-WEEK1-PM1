@@ -30,6 +30,8 @@ Installed VirtualBox and extracted the Kali Linux 7-zip archive. The extracted f
 ## Step 6 - Create a Recovery Snapshot
 # The Outcome
 ## Challenges
+- Antivirus detection: Microsoft Defender flagged the downloaded Kali .7z archive. Since the distribution came from the official Kali Linux page, I inspected the Zip Archive's SHA-256 string using Windows Powershell and cross referenced with the official page to inspect the zip archive's  integrity. Since it the hashes matched, I whitelisted the zip manually and successfully extracted the archive. 
+- Static addressing and DHCP: The VirtualBox NAT Network has DHCP enabled, while Kali's IPv4 address was assigned manually. Since these settings are separate, I had to manually assign the IPv4 address, Default Gateway, and DNS server in Kali Linux.
 ## What I Learned
 1. Virtualisation: How a prebuilt VM's .vbox configuration and .vdi virtual disk are used in VirtualBox.
 2. NAT networking: How a NAT Network creates a shared virtual subnet and gateway for lab VMs.
