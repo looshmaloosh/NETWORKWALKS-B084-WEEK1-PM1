@@ -9,7 +9,7 @@ This project documents the setup of a Kali Linux virtual machine in VirtualBox f
 ## Objectives
 - Set up VirtualBox and import a prebuilt Kali Linux VM.
 - Create a private NAT Network for the virtual Kali lab.
-- COnfigure Kali with a manual IPv4 address, default gateway, and DNS setting.
+- Configure Kali with a manual IPv4 address, default gateway, and DNS setting.
 - Confirm connectivity with the default gateway and an external IP address.
 - Save a snapshot to fallback to when recovery is required.
 ## Lab Architecture
