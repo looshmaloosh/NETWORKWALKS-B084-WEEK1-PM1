@@ -67,7 +67,7 @@ Created a snapshot named Fresh Kali Save after configuring the VM. It provides a
 
 ![Kali Network Snapshot](Project%201/PR7.png)
 
-# The Outcome
+## The Outcome
 The prebuilt Kali Linux VM was imported successfully, attached to the configured NAT Network, and given a manual IPv4 address. The gateway and external-IP ping tests both returned 0% packet loss, and a fallback snapshot was created.
 ## Challenges
 - Antivirus detection: Microsoft Defender flagged the downloaded Kali Linux `.7z` archive as a potential threat. I used Windows PowerShell to calculate the archive's SHA-256 hash and compared it against the checksum published on the official Kali Linux website. The hashes matched, confirming that the downloaded archive was identical to the official release. After verifying its integrity, I restored the archive and successfully extracted it. 
