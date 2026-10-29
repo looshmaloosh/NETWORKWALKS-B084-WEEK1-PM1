@@ -11,7 +11,7 @@ This project documents the setup of a Kali Linux virtual machine in VirtualBox f
 - Create a private NAT Network for the virtual Kali lab.
 - Configure Kali with a manual IPv4 address, default gateway, and DNS setting.
 - Confirm connectivity with the default gateway and an external IP address.
-- Save a snapshot to fallback to when recovery is required.
+- Create a snapshot that can be restored if recovery is required.
 ## Lab Architecture
 | Component | Configuration |
 | --------- | --------------|
@@ -70,7 +70,7 @@ Created a snapshot named Fresh Kali Save after configuring the VM. It provides a
 # The Outcome
 The prebuilt Kali Linux VM was imported successfully, attached to the configured NAT Network, and given a manual IPv4 address. The gateway and external-IP ping tests both returned 0% packet loss, and a fallback snapshot was created.
 ## Challenges
-- Antivirus detection: Microsoft Defender flagged the downloaded Kali .7z archive. Since the distribution came from the official Kali Linux page, I inspected the Zip Archive's SHA-256 string using Windows Powershell and cross referenced with the official page to inspect the zip archive's  integrity. Since it the hashes matched, I whitelisted the zip manually and successfully extracted the archive. 
+- Antivirus detection: Microsoft Defender flagged the downloaded Kali .7z archive. Since the distribution came from the official Kali Linux page, I inspected the Zip Archive's SHA-256 string using Windows Powershell and cross referenced with the official page to inspect the zip archive's  integrity. Since the hashes matched, I whitelisted the zip manually and successfully extracted the archive. 
 - Static addressing and DHCP: The VirtualBox NAT Network has DHCP enabled, while Kali's IPv4 address was assigned manually. Since these settings are separate, I had to manually assign the IPv4 address, Default Gateway, and DNS server in Kali Linux.
 ## What I Learned
 1. Virtualisation: How a prebuilt VM's .vbox configuration and .vdi virtual disk are used in VirtualBox.
