@@ -70,8 +70,8 @@ Created a snapshot named Fresh Kali Save after configuring the VM. It provides a
 # The Outcome
 The prebuilt Kali Linux VM was imported successfully, attached to the configured NAT Network, and given a manual IPv4 address. The gateway and external-IP ping tests both returned 0% packet loss, and a fallback snapshot was created.
 ## Challenges
-- Antivirus detection: Microsoft Defender flagged the downloaded Kali .7z archive. Since the distribution came from the official Kali Linux page, I inspected the archive's SHA-256 hash using Windows Powershell and cross-referenced with the official page to inspect the zip archive's  integrity. Since the hashes matched, I whitelisted and restored the quarantined archive manually and successfully extracted the archive. 
-- Static addressing and DHCP: The VirtualBox NAT Network has DHCP enabled, while Kali's IPv4 address was assigned manually. Since these settings are separate, I had to manually assign the IPv4 address, Default Gateway, and DNS server in Kali Linux.
+- Antivirus detection: Microsoft Defender flagged the downloaded Kali Linux `.7z` archive as a potential threat. I used Windows PowerShell to calculate the archive's SHA-256 hash and compared it against the checksum published on the official Kali Linux website. The hashes matched, confirming that the downloaded archive was identical to the official release. After verifying its integrity, I restored the archive and successfully extracted it. 
+- Static addressing and DHCP: The VirtualBox NAT Network had DHCP enabled, while Kali was configured with a manual IPv4 address. I assigned 10.0.0.2/24 to Kali, configured 10.0.0.1 as the default gateway, and specified 8.8.8.8 as the DNS server.
 ## What I Learned
 1. Virtualisation: How a prebuilt VM's .vbox configuration and .vdi virtual disk are used in VirtualBox.
 2. NAT networking: How a NAT Network creates a shared virtual subnet and gateway for lab VMs.
